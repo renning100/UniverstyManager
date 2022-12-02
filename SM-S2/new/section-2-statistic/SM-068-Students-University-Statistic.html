@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link href="../css/core.css" rel="stylesheet">
+  <link href="../css/sm.css" rel="stylesheet">
+  <link href="../css/global.css" rel="stylesheet">
+
+
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <script src="https://kit.fontawesome.com/2c1e5308ba.js" crossorigin="anonymous"></script>
+  <script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Schools Master</title>
+</head>
+<body>
+<!--TOP NAV OPEN-->
+<nav class="navbar navbar-expand-lg navbar-dark  px-md-0 bg-dark-blue container-fluid">
+  <div class="container-fluid container px-md-0">
+    <div class="d-flex gap-1">
+      <button id="btn-hamburger" class="navbar-toggler p-0 m-0 ps-2" type="button" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active padding-left-0" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Ranking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Prepare</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Apply</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+      </ul>
+      <form class="d-flex">
+        <div class="btn-group">
+          <button class="dropdown-toggle text-light top-down" type="button" id="dropdownMenuClickableOutside"
+                  data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"><img
+            src="assets/avatar.png" height="50"> <span class="text-light">David Scott</span></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+    <div class="mobile-nav menu-close-state">
+      <a class="navbar-brand" href="#"> <img src="assets/SM-Email-Logo.png" width="225"> </a>
+    </div>
+    <div class="mobile-nav align-items-center gap-2 toast-news">
+      <button class="btn p-0 m-0 position-relative">
+        <img src="assets/bell-regula-Wr.svg" alt="" width="20">
+        <span class="css-q8emij position-absolute">14</span>
+      </button>
+      <button class="btn p-0 m-0 position-relative">
+        <img src="assets/user-solidW.svg" alt="" width="20">
+        <span class="css-q9emij position-absolute"></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav-container px-md-0 mt-3 mobile-nav menu-close-state">
+    <div class="d-flex align-items-end">
+      <div class="m-2">
+        <img src="./assets/thomas.png" width="65"/>
+      </div>
+      <div class="">
+        <h4 class="fw-light">Thomas Jefferson High School for Science and Technology</h4>
+      </div>
+    </div>
+  </div>
+  <div class="hidden flex-column align-items-center justify-content-center mt-3 w-100 menu-open-state">
+    <a class="navbar-brand" href="#"> <img src="assets/avatar.png" id="nav-logo" width="100"> </a>
+    <p class="m-0">Scott Henry</p>
+    <span>scott.henry@yahoo.comk</span>
+  </div>
+</nav>
+<div class="hidden" id="navbarSupportedContent">
+  <nav class="sidebar card mb-4">
+    <ul class="nav flex-column gap-3" id="nav_accordion">
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#"> Notifications </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Students inquiries</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Messages</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">New Events</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Students Chat</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Application</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">My Schedule</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">My Calendar</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#"> Dashboard </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">School Basic Info</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Schools Students</a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Location and branches</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#"> Counselor </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Primary Email address </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Phone numbers </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Change Password </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Counselor Courses </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Counselor Workshops </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Counselor Events </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">International Trips </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Conferences </a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#"> Create an Event </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">University Fair </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Career Talk </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Request a Meeting S2U </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Request For Presentation U2S </a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Join Events </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">International Tours Visit List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Open day </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Workshop </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Student for a day </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Competition </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Universities List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">One to One Meeting </a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Students Applications </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Applications List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Recommendation Letters </a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">My students </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">My students </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">My Students </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Add New Student </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Add Bulk Students </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Registration Link </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Registration QR Code </a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Counselor Support </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Workshops </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Courses </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Events </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Conferences </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">International Trips </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">University Visit </a></li>
+        </ul>
+      </li>
+    <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">School SM Credit </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">SM credit over view </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">School activity SM credit </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">University activity SM credit </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Student activity SM credit </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Convert SM credit </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">SM credit history </a></li>
+        </ul>
+      </li>
+    <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Support </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Create a ticket </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Request Call Back </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Chat with us </a></li>
+        </ul>
+      </li>
+    <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Share & Suggest </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Suggest University </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Suggest to School </a></li>
+        </ul>
+      </li>
+          <li class="nav-item has-submenu">
+        <a class="nav-link fs-3 fw-bold accordion-btn" href="#">Statistics and Analyses </a>
+        <ul class="submenu collapse">
+          <li><a class="nav-link submenu-item fs-4" href="#">Destinations Statistics </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Student Destinations List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Destinations Coverage </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Universities statistics </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Student Universities List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Universities Coverage </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Majors statistics </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Student Majors List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Majors Coverage </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Registration List </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Registration Coverage </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Applications Statistics </a></li>
+          <li><a class="nav-link submenu-item fs-4" href="#">Applications Coverage </a></li>
+        </ul>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link fs-3 fw-bold" href="#"> Universities </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!--TOP NAV CLOSED-->
+<!-- HEADER START -->
+<nav class="navbar navbar-expand-lg  navbar-light bg-white px-md-0 mobile-nav-hidden">
+  <div class="container-fluid container px-md-0">
+    <a class="navbar-brand" href="#"> <img src="assets/logo.png" height="40"> </a>
+    <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+      <ul class="navbar-nav new-nav me-auto align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/home.svg" class="ur-icon-navbar" alt="home"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/following.svg" class="ur-icon-navbar" alt="following"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/question.svg" class="ur-icon-navbar" alt="question"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/answer.svg" class="ur-icon-navbar" alt="question"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/groups.svg" class="ur-icon-navbar" alt="groups"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/notifications.svg" class="ur-icon-navbar"
+                                            alt="notifications"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="assets/icons/messages.svg" class="ur-icon-navbar" alt="messages"></a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <ul class="navbar-nav">
+          <li class="nav-link">
+            <a class="nav-link" href="#"><img src="assets/icons/facebook.svg" class="ur-icon-navbar" alt="FB"></a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link" href="#"><img src="assets/icons/twitter.svg" class="ur-icon-navbar" alt="TW"></a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link" href="#"><img src="assets/icons/instegram.svg" class="ur-icon-navbar" alt="Insta"></a>
+          </li>
+          <li class="nav-link">
+            <button class="btn btn-blue m-0" type="submit">&nbsp;<img src="assets/icons/ic_world.png" alt="icon"
+                                                                  style="width: 30px">&nbsp;&nbsp;Language(En)
+            </button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid bg-dark-blue px-md-0 mobile-nav-hidden">
+  <div class="container d-flex align-items-between px-md-0">
+    <div class="col-1 header-img">
+      <img src="./assets/thomas.png" height="150px"/>
+    </div>
+    <div class="col-8 top-header-content-1 align-self-center">
+      <div>
+        <h3 class="h3 mb-4">Thomas Jefferson High School for Science and Technology</h3>
+      </div>
+      <div>
+        <h5 class="h5 my-3">6560 Braddock Rd, Alexandria, Virginia</h5>
+      </div>
+      <div>
+        <h5 class="h5 my-3">School Counselor Account</h5>
+      </div>
+    </div>
+    <div class="col-3 top-header-content text-end align-self-center">
+      <div class="mb-4">
+        <h2 class="h2">Account Info</h2>
+      </div>
+      <div class="my-3 text-end">
+        <h5 class="h5">Type A</h5>
+      </div>
+      <div class="my-3 text-end">
+        <h5 class="h5">Balance 0</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container d-flex align-items-center top-menu-container mb-4">
+  <!-- Example single danger button -->
+  <div class="dropdown menu-item">
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+       aria-expanded="false">
+      Dashboard
+    </a>
+
+    <ul class="dropdown-menu1 shadow-sm dropdown-menu dropdown-menu-header" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item font-1 font-light" href="#">Home Page</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Statistics and Analysis</a></li>
+      <div class="dropdown-divider"></div>
+      <li>
+        <div class="pt-3  font-1 font-normal">School account</div>
+      </li>
+      <li>
+        <div class="font-light gray">Manage School Detail</div>
+      </li>
+      <li><a class="dropdown-item font-light pt-3 font-1" href="#">School Basic Info</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Schools Students</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Location and branches</a></li>
+      <div class="dropdown-divider"></div>
+      <li>
+        <div class="font-1 pt-3 font-normal">School Counselor Profile</div>
+      </li>
+      <li>
+        <div class="font-light gray">Counselor Profile account setting</div>
+      </li>
+      <li><a class="dropdown-item pt-3 font-1 font-light" href="#">Primary Email address</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Phone numbers</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Change Password</a></li>
+      <div class="dropdown-divider"></div>
+      <li>
+        <div class="font-1 pt-3 font-normal">Counselor Support</div>
+      </li>
+      <li>
+        <div class="font-light gray">Development and support center</div>
+      </li>
+      <li><a class="dropdown-item font-1 pt-3 font-light" href="#">Courses</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Workshops</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Events</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">International Trips</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Conferences</a></li>
+    </ul>
+  </div>
+  <div class="dropdown  menu-item">
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+       aria-expanded="false">
+      School
+    </a>
+
+    <ul class="dropdown-menu shadow-sm  dropdown-menu-header dropdown-menu2" aria-labelledby="dropdownMenuLink">
+      <li>
+        <div class="font-1 font-normal">Create an Event</div>
+      </li>
+      <li>
+        <div class="font-light gray">Create and manage events</div>
+      </li>
+      <li><a class="dropdown-item font-light pt-3 font-1" href="#">University Fair</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Career Talk</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Request a Meeting S2U</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Request For Presentation</a></li>
+      <div class="dropdown-divider"></div>
+      <li>
+        <div class="pt-3 font-1 font-normal">Join Events</div>
+      </li>
+      <li>
+        <div class="font-light gray">Find and join events</div>
+      </li>
+      <li><a class="dropdown-item pt-3 font-1 font-light" href="#">University Open day</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Workshops</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Student for a day</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 pt-1 font-light" href="#">Competition</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">International Visit</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">One to One Meeting U2C</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Exhibitions & Fairs</a></li>
+    </ul>
+  </div>
+  <div class="dropdown menu-item">
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+       aria-expanded="false">
+      Students
+    </a>
+
+    <ul class="dropdown-menu shadow-sm dropdown-menu-header dropdown-menu3" aria-labelledby="dropdownMenuLink">
+      <li>
+        <div class="font-1 font-normal">My students</div>
+      </li>
+      <li>
+        <div class="font-light gray">Manage student's registration</div>
+      </li>
+      <li><a class="dropdown-item font-light pt-3 font-1" href="#">My Students</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Add New Student</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Add Bulk Students</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Registration Link</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Registration QR Code</a></li>
+      <div class="dropdown-divider"></div>
+      <li>
+        <div class="font-1 pt-3 font-normal">Students Applications</div>
+      </li>
+      <li>
+        <div class="font-light gray">Manage students Applications</div>
+      </li>
+      <li><a class="dropdown-item pt-3 font-1 font-light" href="#">Applications List</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Recommandation Letters</a></li>
+    </ul>
+  </div>
+  <div class="dropdown menu-item">
+    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+       aria-expanded="false">
+      Universities
+    </a>
+
+    <ul class="dropdown-menu shadow-sm dropdown-menu-header dropdown-menu4" aria-labelledby="dropdownMenuLink">
+      <li>
+        <div class="font-1 font-normal">Join Events</div>
+      </li>
+      <li>
+        <div class="font-light gray">Find & join Universities events</div>
+      </li>
+      <li><a class="dropdown-item font-light pt-3 font-1" href="#">Internation Tours Visit List</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Open day</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Workshop</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Student for a day</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Competition</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">Universities List</a></li>
+      <div class="dropdown-divider"></div>
+      <li><a class="dropdown-item font-1 font-light" href="#">One to One Meeting</a></li>
+    </ul>
+  </div>
+  <div class="currency-select">
+    <button class="blue" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">USD</button>
+  </div>
+</div>
+<!-- HEADER CLOSED -->
+<!-- HEADER CLOSED -->
+<!-- MAIN START -->
+<!-- CONTAINER STAR -->
+<div class="container px-md-0 mb-4">
+  <div class="row">
+    <!-- Left Sidebar start -->
+    <div class="col-lg-1-5 mobile-hidden">
+           <div class="card">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Statistics and Analysis</h5>
+                   <h6 class="h6 gray">a very good look at everything</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-051-Registration-List.html">Registration List</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-063-Registration-Coverage-percentage.html">Covergae Percentage</a></li>
+                       <hr>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-053-List-of-University-Students-by-Students.html">Universities Stastistics</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-067-Students-Universities-List.html">Student List</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-068-Students-University-Statistic.html">Covergae Percentage</a></li>
+                       <hr>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-064-Students-Majors-Statistic.html">Major Statistics</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-052-Students-selected-a-major-list.html">Student List</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-066-Students-Majors-Statistic.html">Covergae Percentage</a></li>
+                       <hr>
+                        <li class="mb-2"><a class="a-underline blue active" href="http://1.daeux.com/SM/new/section-2-statistic/SM-071-List-of-Destinations-Selected-by-Students.html">Destinations & Statisctics</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-054-Students-Destination-List.html">Student List</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="http://1.daeux.com/SM/new/section-2-statistic/SM-072-Students-Destination-Statistic.html">Covergae Percentage</a></li>
+                   </ul>
+                 </div>
+               </div>
+            
+            </div>
+    <!-- Left Sidebar end -->
+    <!-- Boday Start -->
+    <div class="col-lg-5-8 col-sm-12">
+        <div class="h5 blue">Students University Statistic</div>
+      <div class="card">
+        <div id="event_lead">
+          <div class="card-body">
+            <div class="w-100">
+              <div class="row">
+                <div class="col-12">
+                  
+                </div>
+              </div>
+              <div class="row" >
+                <div class="col-12 col-md-5 blue">
+                  <p class="paragraph-style2 my-2">Total Students: 200</p>
+                   <p class="paragraph-style2 my-2 font-weight-bold">150 Students have already selected their university of choice</p>
+                    <p class="paragraph-style2 my-2">Remind students who didn't registered or complete their profiles to register and complete their profiles.</p>
+                  <button class="button-sm button-dark-blue">Send Reminder to Students Now!</button>
+                   <p class="paragraph-style2 my-2">an email will be sent to students who doesn't register or didn't complete their profiles to as a reminder to complete this stage.</p>
+                </div>
+                <div class="col-12 col-md-7"
+                     x-init="$nextTick(() => {new Chart('pie-chart',{
+                       type: 'pie',
+                       data: {
+                       labels: [ '150 Students which is 75% have selected a university','50 Students which is 25% did not selecte a university yet'],
+                       datasets: [{
+                       label: 'My First Dataset',
+                       data: [150, 50],
+                       backgroundColor: ['#039be5','#1c345a'],
+                       hoverOffset: 4
+                       }],
+                      },
+                      options: {plugins: {legend: {position: 'top',align: 'start'}}}
+                    })//end new chart function
+                })">
+                  <canvas id="pie-chart" width="200" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Boday end -->
+
+     <!-- RIGHT SIDEBAR START -->
+    <div class="col-lg-1-5 mobile-hidden">
+        <div class="card">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Notifications</h5>
+                   <h6 class="h6 gray">Stay in touch, Stay connected</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue active" href="#">Students inquiries</a><span class="badge rounded-pill bg-danger align-right float-end">14</span></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Messages</a><span class="badge rounded-pill bg-danger align-right float-end">14</span></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">New Events</a><span class="badge rounded-pill bg-danger align-right float-end">15</span></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Students Chats</a><span class="badge rounded-pill bg-danger align-right float-end">7</span></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Application</a><span class="badge rounded-pill bg-danger align-right float-end">5</span></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">My Scedule</a><span class="badge rounded-pill bg-danger align-right float-end">5</span></li>
+                       <li><a class="a-underline blue" href="#">My Calendar</a><span class="badge rounded-pill bg-danger align-right float-end">5</span></li>
+                   </ul>
+                </div>
+            </div>
+        <div class="card mt-3">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Create an Event</h5>
+                   <h6 class="h6 gray">Create and manage events</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue active" href="#">University Fair</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Career Talk</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Request a Meeting S2U</a></li>
+                       <li><a class="a-underline blue" href="#">Request For Presentation U2S</a></li>
+                   </ul>
+                 </div>
+               </div>
+        <div class="card mt-3">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Join Events</h5>
+                   <h6 class="h6 gray">Find & join Universities events</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue active" href="#">Internation Tours Visit List</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Open day</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Workshop</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Student for a day</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Competition</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Universities List</a></li>
+                       <li><a class="a-underline blue" href="#">One to One Meeting</a></li>
+                   </ul>
+                 </div>
+               </div>
+        <div class="card mt-3">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Support</h5>
+                   <h6 class="h6 gray">We are here to help</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue active" href="#">Creat a ticket</a></li>
+                       <li class="mb-2"><a class="a-underline blue" href="#">Request Call Back</a></li>
+                       <li><a class="a-underline blue" href="#">Chat with us</a></li>
+                   </ul>
+                 </div>
+               </div>
+        <div class="card mt-3">
+                 <div class="card-body">
+                   <h5 class="h5 blue">Share & Suggest</h5>
+                   <h6 class="h6 gray">Invite Colleagues, & Universities</h6>
+                   <hr>
+                   <ul class="sidebar-ul">
+                       <li class="mb-2"><a class="a-underline blue active" href="#">Suggest University</a></li>
+                       <li><a class="a-underline blue" href="#">Suggest to School</a></li>
+                   </ul>
+                 </div>
+               </div>
+      
+    </div>
+    <!-- RIGHT SIDEBAR CLOSED -->
+    <!-- CONTAINER CLOSED -->
+  </div>
+</div>
+<!-- MAIN CLOSED -->
+<!-- BANNER START -->
+<div class="container px-md-0 mobile-hidden">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 mx-auto text-center"><img src="assets/banner.png" class="w-100 mt-4"></div>
+    <div class="col-2"></div>
+  </div>
+</div>
+<!-- BANNER CLOSED -->
+<!-- NEWSLETTER START -->
+<section class="mobile-hidden" style="background-color:#f9f9f9 !important">
+  <div class="container px-md-0 mx-auto text-center mt-5 p-4 ">
+    <p class="h3 fw-bold mt-4">SUBSCRIBE TO OUR NEWSLETTER</p>
+    <div class="input-group mx-auto  text-center w-50 mt-4 mb-5">
+      <input type="email" class="form-control form-control3" placeholder="Your email address"
+             aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-sub">
+        <button class="btn btn-primary sub-btn" type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- NEWSLETTER CLOSED -->
+<!-- FOOTER START -->
+<!-- modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title h4 fw-bold blue" id="staticBackdropLabel">Select Your Currency</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5 class="modal-title h5 fw-bold blue" id="staticBackdropLabel">Suggested for you</h5>
+        <div class="d-flex blue mt-2">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">U.A.E. Diirham</div>
+            <div class="currency-symbol gray">AED</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Euro</div>
+            <div class="currency-symbol gray">EUR</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Pound Sterling</div>
+            <div class="currency-symbol gray">GBP</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Indian Rupee</div>
+            <div class="currency-symbol gray">INR</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Philippine Peso</div>
+            <div class="currency-symbol gray">PHP</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Brazailian Real</div>
+            <div class="currency-symbol gray">BRL</div>
+          </div>
+        </div>
+        <h5 class="h5  mt-2 fw-bold blue" id="staticBackdropLabel">All Currencies</h5>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Property's Currency</div>
+            <div class="currency-symbol gray">£$</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Argentine Peso</div>
+            <div class="currency-symbol gray">ARS</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Australlian Dollar</div>
+            <div class="currency-symbol gray">AUD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Azerbaijani New Manats</div>
+            <div class="currency-symbol gray">AZN</div>
+          </div>
+        </div>
+        <div class="d-flex  blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Bahrain Dinar</div>
+            <div class="currency-symbol gray">BHD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Brazilian Real</div>
+            <div class="currency-symbol gray">BRL</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Bulgarian Lev</div>
+            <div class="currency-symbol gray">BGN</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Canadian Dollar</div>
+            <div class="currency-symbol gray">CAD</div>
+          </div>
+        </div>
+        <div class="d-flex  blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">CFA Franc BCEAO</div>
+            <div class="currency-symbol gray">XOF</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Chilean Peso</div>
+            <div class="currency-symbol gray">CLP</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Chinese Yuan</div>
+            <div class="currency-symbol gray">CNY</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Columbian Peso</div>
+            <div class="currency-symbol gray">COP</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Czech Koruna</div>
+            <div class="currency-symbol gray">CZK</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Danish Krone</div>
+            <div class="currency-symbol gray">DKK</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Egyptian Pund</div>
+            <div class="currency-symbol gray">EGP</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Euro</div>
+            <div class="currency-symbol gray">EUR</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Fijian Dollar</div>
+            <div class="currency-symbol gray">FJD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Georgian Lari</div>
+            <div class="currency-symbol gray">GEL</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Hong Kong Dollar</div>
+            <div class="currency-symbol gray">HKD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Hungarian Forint</div>
+            <div class="currency-symbol gray">HUF</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Indian Rupee</div>
+            <div class="currency-symbol gray">INR</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Indonesian Rupiah</div>
+            <div class="currency-symbol gray">IDR</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Japansese Yen</div>
+            <div class="currency-symbol gray">YPY</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Jordanian Dinar</div>
+            <div class="currency-symbol gray">JOD</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Kazakhstani Tenge</div>
+            <div class="currency-symbol gray">KZT</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Korean Won</div>
+            <div class="currency-symbol gray">KRW</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Kuwaiti Dinar</div>
+            <div class="currency-symbol">KWD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Malaysian Ringgit</div>
+            <div class="currency-symbol gray">MYR</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Mexican Peso</div>
+            <div class="currency-symbol gray">MXN</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Moldovan Leu</div>
+            <div class="currency-symbol gray">MDL</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Namibian Dollar</div>
+            <div class="currency-symbol gray">NAD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">New Israeli Sheqel</div>
+            <div class="currency-symbol gray">ILS</div>
+          </div>
+        </div>
+        <div class="d-flex blue">
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">New Taiwan Dollar</div>
+            <div class="currency-symbol gray">TWD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+
+            <div class="currency-name">New Zealand Dollar</div>
+            <div class="currency-symbol gray">NZD</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Norwegian Krone</div>
+            <div class="currency-symbol gray">NOK</div>
+          </div>
+          <div class="col-lg-3 currency-div">
+            <div class="currency-name">Omani Rial</div>
+            <div class="currency-symbol gray">OMR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End-modal -->
+<footer class="bg-blue">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-12 col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item h3 fw-bold borderless mb-4">
+            SCHOOLSMASTER
+            <div class="decorative-spacer mt-2"></div>
+          </li>
+          <li class="list-group-item borderless">Top World Universities</li>
+          <li class="list-group-item borderless">Top North America Universities</li>
+          <li class="list-group-item">Top Latin America Universities</li>
+          <li class="list-group-item borderless">Top Europe America Universities</li>
+          <li class="list-group-item">Top Asia America Universities</li>
+          <li class="list-group-item borderless">Top Africa America Universities</li>
+          <li class="list-group-item">Top Arab America Universities</li>
+          <li class="list-group-item">Top Oceania America Universities</li>
+        </ul>
+        <img src="assets/flogo.png" class="mt-4 footer-apps-logo">
+      </div>
+      <div class="col-12 col-md-3 my-4 my-md-0">
+        <ul class="list-group">
+          <li class="list-group-item h3 fw-bold borderless mb-4">
+            UNIRANKS
+            <div class="decorative-spacer mt-2"></div>
+          </li>
+          <li class="list-group-item borderless">Top World Universities</li>
+          <li class="list-group-item borderless">Top North America Universities</li>
+          <li class="list-group-item">Top Latin America Universities</li>
+          <li class="list-group-item borderless">Top Europe America Universities</li>
+          <li class="list-group-item">Top Asia America Universities</li>
+          <li class="list-group-item borderless">Top Africa America Universities</li>
+          <li class="list-group-item">Top Arab America Universities</li>
+          <li class="list-group-item">Top Oceania America Universities</li>
+        </ul>
+        <img src="assets/uniranks-logo-footer.png" class="mt-4 footer-apps-logo">
+      </div>
+      <div class="col-12 col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item h3 fw-bold borderless mb-4">
+            WHERS
+            <div class="decorative-spacer mt-2"></div>
+          </li>
+          <li class="list-group-item borderless">Top World Universities</li>
+          <li class="list-group-item borderless">Top North America Universities</li>
+          <li class="list-group-item">Top Latin America Universities</li>
+          <li class="list-group-item borderless">Top Europe America Universities</li>
+          <li class="list-group-item">Top Asia America Universities</li>
+          <li class="list-group-item borderless">Top Africa America Universities</li>
+          <li class="list-group-item">Top Arab America Universities</li>
+          <li class="list-group-item">Top Oceania America Universities</li>
+        </ul>
+        <img src="assets/whers-logo.png" class="mt-4 footer-apps-logo">
+      </div>
+      <div class="col-12 col-md-3 mt-4 my-md-0">
+        <ul class="list-group">
+          <li class="list-group-item h3 fw-bold borderless mb-4">
+            Follow Us
+            <div class="decorative-spacer mt-2"></div>
+          </li>
+          <li class="list-group-item borderless">
+            <a href="#"> <i class="fa-brands fa-square-facebook ic_style3"></i></a>
+            <a class="px-2" href="#"> <i class="fa fa-twitter ic_style3"></i></a>
+            <a href="#"> <i class="fa fa-instagram ic_style3"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="normal-spacer"></div>
+      </div>
+    </div>
+    <div class="row my-3 align-items-center">
+      <div class="col-12 col-md-3  py-2 py-md-0 text-center text-md-start">
+        <label>Pakistan</label>
+      </div>
+      <div class="col-12 col-md-6 py-2 py-md-0">
+        <ul class="list-group list-group-horizontal justify-content-center">
+          <li class="list-group-item border-right">FAQ</li>
+          <li class="list-group-item border-right">Partners</li>
+          <li class="list-group-item border-right">Contact</li>
+          <li class="list-group-item border-right">Privacy</li>
+          <li class="list-group-item border-right">Cookies</li>
+          <li class="list-group-item">Terms</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 py-2 px-0">
+        <ul class="w-100 list-group list-group-horizontal justify-content-center justify-content-md-end">
+          <li class="list-group-item border-right">English</li>
+          <li class="list-group-item">العربية</li>
+          <li class="list-group-item">
+            <select class="footer-language-select">
+              <option>English</option>
+              <option>العربية</option>
+              <option>Turkish</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="mx-auto text-center">
+          <p class="text-light">2022 &copy; UNIBANKS All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER CLOSED -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+<script>
+function changeProgress(progressBarId, progressValue, animDurPerStep = 15) {
+    var progressBar = document.getElementById(progressBarId);
+    var oldProgressValue = -parseInt(window.getComputedStyle(progressBar).getPropertyValue("background-position"));
+    if (progressValue > 100) progressValue = 100;
+    else if (progressValue < 0) progressValue = 0;
+    else progressValue = Math.round(progressValue / 10) * 10;
+    var steps = Math.abs(oldProgressValue - progressValue) / 10;
+    var totalAnimDur = animDurPerStep * steps;
+    progressBar.style.transition = totalAnimDur + "ms steps(" + steps + ")";
+    progressBar.style.backgroundPosition = -10 + "%";
+  }
+</script>
+<script>
+  function openTabb(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" activee", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " activee";
+  }
+
+
+</script>
+<script src="js/intlTelInput.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    utilsScript: "js/utils.js",
+
+  });
+</script>
+</body>
+</html>
